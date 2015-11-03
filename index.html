@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fun with Forms</title>
+  </head>
+  <body>
+    <h1>What do these attributes do?</h1>
+    <ul>
+      <li>placeholder</li>
+      <li>checked</li>
+      <li>selected</li>
+      <li>for</li>
+      <li>multiple</li>
+      <li>method</li>
+      <li>action</li>
+      <li>name</li>
+    </ul>
+    <form method="get" action=".">
+      <fieldset>
+        <input type="text" name="first_name" placeholder="First name" />
+        <input type="text" name="last_name" placeholder="Last name" />
+      </fieldset>
+      <fieldset>
+        <textarea name="quote" placeholder="Favorite joke"></textarea>
+      </fieldset>
+      <fieldset>
+        Age:
+        <input type="radio" name="age" id="age_young" value="young" />
+        <label for="age_young">&lt; 21</label>
+        <input type="radio" checked="true" name="age" id="age_old" value="old" />
+        <label for="age_old">&ge; 21</label>
+      </fieldset>
+      <fieldset>
+        Nationality:
+        <select name="nationality">
+          <option value="murican">'murican</option>
+          <option value="unamurican" selected="true">Not 'murican</option>
+        </select>
+      </fieldset>
+      <fieldset>
+        Favorite programming languages:
+        <select name="language" multiple="true">
+          <option value="ruby">Ruby</option>
+          <option value="js">Javascript</option>
+          <option value="html">HTML</option>
+          <option value="css">CSS</option>
+          <option value="haskell">Haskell</option>
+        </select>
+      </fieldset>
+      <fieldset>
+        Check if you're cool:
+        <input type="checkbox" name="is_cool" checked="true" />
+      </fieldset>
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
