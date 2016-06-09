@@ -5,6 +5,7 @@
   </head>
   <body>
     <h1>What do these attributes do?</h1>
+    <p>Play with the form, try submitting it, and look at the source code to find out.</p>
     <ul>
       <li>placeholder</li>
       <li>checked</li>
@@ -17,7 +18,8 @@
     </ul>
     <form method="get" action=".">
       <fieldset>
-        <input type="text" name="first_name" placeholder="First name" />
+        <label for="first_name">Name:</label>
+        <input type="text" id="first_name" name="first_name" placeholder="First name" />
         <input type="text" name="last_name" placeholder="Last name" />
       </fieldset>
       <fieldset>
@@ -42,14 +44,21 @@
         <select name="language" multiple="true">
           <option value="ruby">Ruby</option>
           <option value="js">Javascript</option>
-          <option value="html">HTML</option>
+          <option value="html" selected="true">HTML</option>
           <option value="css">CSS</option>
           <option value="haskell">Haskell</option>
         </select>
       </fieldset>
       <fieldset>
-        Check if you're cool:
-        <input type="checkbox" name="is_cool" checked="true" />
+        What describes you?
+        <input type="checkbox" id="is_cool" name="description" checked="true" />
+        <label for="is_cool">Cool</label>
+
+        <input type="checkbox" name="description" />
+        <label>Good-smelling</label>
+
+        <input type="checkbox" id="insalubrious" />
+        <label for="insalubrious">Insalubrious</label>
       </fieldset>
       <input type="submit" value="Submit" />
     </form>
